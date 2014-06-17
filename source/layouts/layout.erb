@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+
+    <!-- Always force latest IE rendering engine or request Chrome Frame -->
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1" />
+
+    <!-- Use title if it's in the page YAML frontmatter -->
+    <title><%= current_page.data.title %></title>
+
+    <link href='http://fonts.googleapis.com/css?family=Lato:100,300|Volkhov:400,700' rel='stylesheet' type='text/css'>
+
+    <%= stylesheet_link_tag "unsemantic-grid", "all" %>
+  </head>
+
+  <body class="<%= page_classes %>">
+    <header class="grid-container full-width">
+      <%= image_tag 'logo.png', :class => 'display-logo' %><br><br>
+      <h1 class="grid-70 push-15">
+        A workshop series on “How to become a better service provider” for Real Estate agents, Travel agents, Insurance Agents and Aspiring Entrepreneurs
+      </h1>
+      <br>
+    </header>
+    <%= yield %>
+    <%= javascript_include_tag  "all" %>
+  </body>
+</html>

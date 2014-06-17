@@ -1,0 +1,40 @@
+@import 'normalize';
+@import 'scut';
+@import 'compass/css3/box-sizing';
+@import "compass/css3/images";
+
+* { @include box-sizing(border-box); }
+
+* {
+  position:            relative;
+}
+
+$font-color:           lighten(#000, 30%);
+
+body {
+  overflow-x:          hidden;
+  font-family:         'Lato', sans-serif;
+  font-weight:         300;
+  color:               $font-color;
+}
+
+.special-font {
+  font-family:         'Volkhov', serif;
+}
+
+.grid-container.full-width {
+  max-width:           100%;
+}
+
+header {
+  text-align:          center;
+  max-width:           100%;
+  width:               100%;
+
+  @include background(image-url("white-back.png"));
+  @include scut-padding(10% n 10% n);
+}
+
+.display-logo {
+  width:               200px;
+}

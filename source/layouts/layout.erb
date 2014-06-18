@@ -10,17 +10,31 @@
     <!-- Use title if it's in the page YAML frontmatter -->
     <title><%= current_page.data.title %></title>
 
-    <link href='http://fonts.googleapis.com/css?family=Lato:100,300|Volkhov:400,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400|Volkhov:400,700' rel='stylesheet' type='text/css'>
 
     <%= stylesheet_link_tag "unsemantic-grid", "all" %>
   </head>
 
   <body class="<%= page_classes %>">
-    <header class="grid-container full-width">
-      <%= image_tag 'logo.png', :class => 'display-logo' %><br><br>
-      <h1 class="grid-70 push-15">
-        A workshop series on “How to become a better service provider” for Real Estate agents, Travel agents, Insurance Agents and Aspiring Entrepreneurs
-      </h1>
+    <header>
+      <div class="white-back"></div>
+      <span class="tagline">seekh kar <span class="bold">bech,</span> smartly <span class="bold">bech.</span></span>
+      <div class="pos-rel">
+        <%= image_tag 'logo.png', :class => 'display-logo' %>
+        <hr class="green-line">
+      </div><br><br>
+      <section class="grid-container">
+        <h1 class="grid-70 push-15">
+          A workshop series on “How to become a better service provider” for Real Estate agents, Travel agents, Insurance Agents and Aspiring Entrepreneurs
+        </h1>
+        <p class="grid-70 push-15">
+          <b>Broken down into 5 sessions, this series aims to empower today’s service providers. Service provider today needs better understanding about their customers to serve them better, thus leading to a professional growth.
+            <br><br>
+          <mark>The first introductory session is being offered at 50% discount</mark>, so that you can get a good idea about the entire series, do not hesitate to register!</b><br>
+        </p>
+      </section>
+      <br>
+      <h2 class="content-center"><span class="underline">Kindly scroll below to know more</span> &nbsp;&nbsp;&nbsp;&#8595;</h2>
       <br>
     </header>
     <%= yield %>

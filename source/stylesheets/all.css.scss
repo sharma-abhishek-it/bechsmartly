@@ -3,7 +3,9 @@
 @import 'compass/css3/box-sizing';
 @import 'compass/css3/images';
 @import 'compass/css3/border-radius';
+@import 'compass/css3/text-shadow';
 @import 'compass/css3/box-shadow';
+@import 'compass/css3/hyphenation';
 
 * { @include box-sizing(border-box); }
 
@@ -30,58 +32,62 @@ body {
   font-family:         'Volkhov', serif;
 }
 
-// .grid-container.full-width {
-//   max-width:           100%;
-// }
-
-header {
-  //text-align:          center;
-  height:              85%;
+.index header {
   color:               darken($green, 20%);
+
   @include background(image-url("congruent_pentagon.png"));
-  @include scut-padding(5% n n n);
 
   hr.green-line {
-    width:             85%;
     border-width:      0px;
     border-bottom:     1px solid $green;
 
-    @include scut-relative(-47px n n n);
+    @include scut-relative(-52px n n n);
   }
-  p,h1 {
-    text-align:        left;
+  .bold {
+    font-weight:       300;
+    color:             black;
   }
-  p,h1,h2{
+  .title {
+    text-align:        justify;
+
+    @extend h1;
+    @extend .bold;
+
+    @include hyphens(auto);
+  }
+  p {
+    font-size:         17px;
+  }
+  h2{
     font-weight:       300;
   }
-  b {
-    font-weight:       normal;
-  }
   .white-back {
-    height:            100%;
     width:             85%;
     background-color:  rgba(255,255,255,0.5);
 
-    @include scut-absolute(0 n n 7.5%);
+    @include scut-center-block;
     @include box-shadow(0px 0px 4px $green);
   }
-  .tagline {
-    @include scut-absolute(94px 18.4% n n);
-    //@extend .special-font;
+  .logo-container {
+    left:              13.7%;
+    width:             240px;
+    background-color:  White;
+
+    @include scut-padding(60px n 10px n);
+    @include border-bottom-radius(3px);
+    @include box-shadow(0px 0px 1px $green);
   }
-}
+  .tagline {
+    @include scut-absolute(94px 16% n n);
+  }
+  .display-logo {
+    display:           block;
+    width:             200px;
 
-.display-logo {
-  width:               200px;
-  left:                18%;
-  // padding:             25px;
-  // background-color:    White;
-  //
-  // @include box-sizing(content-box);
-  // @include border-radius(5px);
-  // @include box-shadow(1px 1px 3px darken($green, 20%));
-}
+    @include scut-center-block;
+  }
 
+}
 
 // ----------------------------------------------------------------------------
 //                             UTILITIES
@@ -91,7 +97,4 @@ header {
 }
 .content-center {
   text-align:          center;
-}
-.bold {
-  font-weight:         400;
 }

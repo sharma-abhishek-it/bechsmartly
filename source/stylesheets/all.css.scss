@@ -89,6 +89,77 @@ body {
 
 }
 
+$gradient-color:     rgba(11,254,216,0.5);
+.design2 nav, .design2 header {
+  color:               lighten($green, 45%);
+}
+.design2 header {
+  @include background(
+    linear-gradient($gradient-color, $gradient-color),
+    image-url('dark-back.png')
+  );
+  @include box-shadow(1px 1px 5px lighten(#000,30%));
+
+  .display-logo {
+    height:            80px;
+    background-color:  White;
+    z-index:           2;
+
+    @include scut-padding(10px 20px);
+    @include box-sizing(content-box);
+    @include border-bottom-radius(3px);
+  }
+  hr.green-line {
+    top:               -53px;
+    left:              -39.4%;
+    width:             223px;
+    z-index:           2;
+    border-width:      0px;
+    border-bottom:     1px solid $green;
+  }
+  .bold {
+    font-weight:       300;
+    color:             White;
+  }
+  .title {
+    font-size:         28px;
+    @extend .bold;
+
+    @include hyphens(auto);
+  }
+  p {
+    font-size:         17px;
+    padding:           0px;
+  }
+  h2{
+    font-weight:       300;
+  }
+}
+.design2 nav {
+  @include background(
+    linear-gradient($gradient-color, $gradient-color),
+    image-url('dark-back.png')
+  );
+  width:               100%;
+  position:            fixed;
+  top:                 0px;
+  height:              59px;
+  border-bottom:       1px solid White;
+  text-align:          right;
+
+  ul {
+    margin-top:        20px;
+    @include scut-list-inline(20px, false);
+  }
+  a {
+    text-decoration:   none;
+    color:             inherit;
+    &:hover {
+      color:           white;
+      text-decoration: underline;
+    }
+  }
+}
 // ----------------------------------------------------------------------------
 //                             UTILITIES
 // ----------------------------------------------------------------------------

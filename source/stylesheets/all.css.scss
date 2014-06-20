@@ -94,6 +94,7 @@ $gradient-color:     rgba(11,254,216,0.5);
   color:               lighten($green, 45%);
 }
 .design2 header {
+  min-height:          85%;
   @include background(
     linear-gradient($gradient-color, $gradient-color),
     image-url('dark-back.png')
@@ -101,11 +102,11 @@ $gradient-color:     rgba(11,254,216,0.5);
   @include box-shadow(1px 1px 5px lighten(#000,30%));
 
   .display-logo {
-    height:            80px;
+    height:            90px;
     background-color:  White;
     z-index:           2;
 
-    @include scut-padding(10px 20px);
+    @include scut-padding(40px 50px 30px 50px);
     @include box-sizing(content-box);
     @include border-bottom-radius(3px);
   }
@@ -116,13 +117,14 @@ $gradient-color:     rgba(11,254,216,0.5);
     z-index:           2;
     border-width:      0px;
     border-bottom:     1px solid $green;
+    display: none;
   }
   .bold {
     font-weight:       300;
     color:             White;
   }
   .title {
-    font-size:         28px;
+    font-size:         26px;
     @extend .bold;
 
     @include hyphens(auto);
@@ -133,6 +135,14 @@ $gradient-color:     rgba(11,254,216,0.5);
   }
   h2{
     font-weight:       300;
+  }
+  .grid-40-edited {
+    width:             43%;
+    margin-left:       2%;
+  }
+  .graphic {
+    max-width:         116%;
+    margin-top:        10%;
   }
 }
 .design2 nav {
@@ -168,4 +178,7 @@ $gradient-color:     rgba(11,254,216,0.5);
 }
 .content-center {
   text-align:          center;
+}
+.float-right {
+  float:               right;
 }

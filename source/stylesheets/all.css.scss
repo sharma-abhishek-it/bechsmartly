@@ -36,7 +36,7 @@ body {
 
 $gradient-color:     rgba(11,254,216,0.5);
 
-nav,  header {
+nav,  header, .green-textured-back {
   color:               lighten($green, 45%);
   @include background(
     linear-gradient($gradient-color, $gradient-color),
@@ -121,6 +121,16 @@ header {
     padding-left:      25px;
     border-left:       3px solid lighten(#000, 80%);
   }
+  &.green-textured-back {
+    .title {
+      background-color:transparent;
+      color:           White;
+      &:after {
+        @include background(image-url('logo-w-tx.png') no-repeat);
+        @include background-size;
+      }
+    }
+  }
   .title {
     background-color:  White;
     padding-left:      15px;
@@ -146,6 +156,36 @@ header {
   .small {
     font-size:         12px;
   }
+  .benefit {
+    padding-left:      15px;
+    font-size:         20px;
+    border-top:        1px dotted lighten(#000, 80%);
+    .glyphicon {
+      color:           $green;
+    }
+  }
+  .ctx-no-pad {
+    padding:           0px;
+  }
+}
+
+.faq {
+  .glyphicon {
+    @include scut-absolute(3px 3px n n);
+  }
+
+  .glyphicon-plus-sign  { display: inline; }
+  .glyphicon-minus-sign { display: none;   }
+  .list-group-item-text { display: none;   }
+
+  &.current {
+    .glyphicon-plus-sign  { display: none;   }
+    .glyphicon-minus-sign { display: inline; }
+    .list-group-item-text { display: block;  }
+  }
+}
+a.faq {
+  outline:             0;
 }
 
 .register-container {
@@ -171,7 +211,7 @@ header {
 
   &.affix {
     right:             6.7%;
-    top:               91px;
+    top:               111px;
   }
 
   .btn-primary {
@@ -186,6 +226,19 @@ header {
   .pre {
     margin-left:      5%;
   }
+  .ctx-mrgn-s {
+    margin-top:       10px;
+  }
+  .ctx-mrgn-m {
+    margin-top:       15px;
+  }
+}
+
+.sticky {
+  width:     350px;
+  &.sticky1 { left: -80px;}
+  &.sticky3 { left: -50px;}
+  &.sticky5 { left: 150px;}
 }
 // ----------------------------------------------------------------------------
 //                             UTILITIES

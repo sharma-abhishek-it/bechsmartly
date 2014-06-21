@@ -1,11 +1,12 @@
 //= require_tree .
 
-$('.dialog-container').waypoint(function(direction){
-  if(direction === 'down') {
-    $(this).addClass('fixed');
-  } else {
-    $(this).removeClass('fixed');
-  }
+$(document).ready(function(){
+  $('.faq').click(function(e){
+    e.preventDefault();
+    e.stopPropagation();
 
-
-},{offset: 100});
+    $('.faq').removeClass('current');
+    $(this).addClass('current');
+  });
+  $('.faq:first').trigger('click');
+})

@@ -191,15 +191,15 @@ title: bech Smartly -  seekh kar bech, smartly bech.
       <h1 class="title">FAQs</h1>
       <br><br>
       <div class="list-group">
-        <% data.faqs.faqs.each do |faq| %>
-          <a href="#" class="list-group-item faq">
+        <% data.faqs.faqs.each_with_index do |faq, index| %>
+          <a href="#" class="list-group-item faq <%= 'current' if index == 0 %>">
             <div class="list-group-item-heading">
               <span class="col-md-1">Q: </span> <span class="col-md-10"><%= faq.q %></span>
               <span class="clearfix"></span>
               <span class="glyphicon glyphicon-plus-sign"></span>
               <span class="glyphicon glyphicon-minus-sign"></span>
             </div>
-            <p class="list-group-item-text col-md-10 col-md-offset-1"><small><%= faq.a %></small></p>
+            <p class="list-group-item-text"><span class="col-md-1"><small>Ans: </small></span><small class="col-md-10"><%= faq.a %></small></p>
             <span class="clearfix"></span>
           </a>
         <% end %>

@@ -8,5 +8,4 @@ $(document).ready(function(){
     $('.faq').removeClass('current');
     $(this).addClass('current');
   });
-  $('.faq:first').trigger('click');
 })

@@ -1,4 +1,4 @@
-.index header {
+/*.index header {
   color:               darken($green, 20%);
 
   @include background(image-url("congruent_pentagon.png"));
@@ -53,4 +53,4 @@
     @include scut-center-block;
   }
 
-}
+}*/

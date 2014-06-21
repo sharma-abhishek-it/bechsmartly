@@ -1,0 +1,56 @@
+.index header {
+  color:               darken($green, 20%);
+
+  @include background(image-url("congruent_pentagon.png"));
+
+  hr.green-line {
+    border-width:      0px;
+    border-bottom:     1px solid $green;
+
+    @include scut-relative(-52px n n n);
+  }
+  .bold {
+    font-weight:       300;
+    color:             black;
+  }
+  .title {
+    text-align:        justify;
+
+    @extend h1;
+    @extend .bold;
+
+    @include hyphens(auto);
+  }
+  p {
+    font-size:         17px;
+  }
+  h2{
+    font-weight:       300;
+  }
+  .white-back {
+    width:             85%;
+    background-color:  rgba(255,255,255,0.5);
+
+    @include scut-center-block;
+    @include box-shadow(0px 0px 4px $green);
+  }
+  .logo-container {
+    left:              13.7%;
+    width:             240px;
+    background-color:  White;
+
+    @include scut-padding(60px n 10px n);
+    @include border-bottom-radius(3px);
+    @include box-shadow(0px 0px 1px $green);
+  }
+  .tagline {
+    @include scut-absolute(94px 16% n n);
+  }
+  .display-logo {
+    display:           block;
+    width:             200px;
+
+    @include scut-center-block;
+  }
+
+}

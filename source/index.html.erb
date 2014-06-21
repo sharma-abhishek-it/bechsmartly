@@ -2,25 +2,238 @@
 title: bech Smartly -  seekh kar bech, smartly bech.
 ---
 <header>
-  <div class="white-back">
-    <span class="tagline">seekh kar <b>bech,</b> smartly <b>bech.</b></span>
-
-    <div class="logo-container">
-      <%= image_tag 'logo.png', :class => 'display-logo' %>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-5">
+        <%= image_tag 'logo.png', :class => 'display-logo' %>
+      </div>
     </div>
-    <hr class="green-line">
-    <br>
-    <p class="grid-70 push-15 title">
-      A workshop series on “How to become a better service provider” for existing and budding providers like Travel agents, Real Estate agents, Insurance agents etc.
-    </p>
-    <p class="grid-70 push-15 bold">
-      Broken down into 5 sessions, this series aims to empower today’s service providers. A service provider today, needs better understanding about their customers to serve them better, thus leading to a professional growth.
-        <br><br>
-      <mark>The first introductory session is absolutely FREE of cost</mark>, so that you can get a good idea about the entire series. Do not hesitate to register!<br>
-    </p>
-    <div class="clearfix"></div>
-    <br>
-    <h2 class="content-center grid-100"><span class="underline">Kindly scroll below to know more</span> &nbsp;&nbsp;&nbsp;&#8595;</h2>
-    <br>
+    <div class="row">
+      <div class="col-md-6">
+        <h3 class="title special-font">A workshop series on “How to become a better service provider” for existing and budding providers like Travel agents, Real Estate agents, Insurance agents etc.</h3>
+        <br>
+        <p>
+          Broken down into 5 sessions, this series aims to empower today’s service providers. A service provider today, needs better understanding about their customers to serve them better, thus leading to a professional growth.
+          <br><br>
+          <mark>The first introductory session is absolutely FREE of cost</mark>, so that you can get a good idea about the entire series. Do not hesitate to register!<br>
+        </p>
+        <br>
+        <p class="ctx-center-big"><span class="underline">Kindly scroll below to know more</span> &nbsp;&nbsp;&nbsp;&#8595;</p>
+      </div>
+      <div class="col-md-6">
+        <%= image_tag 'graphics.png', :class => 'graphic' %>
+      </div>
+    </div>
   </div>
+  <br>
 </header>
+
+<nav>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-5">
+        <a href="#"><%= image_tag "logo-w-tx.png", :class=> 'nav-logo' %></a>
+      </div>
+      <div class="col-md-7 content-right">
+        <ul>
+          <li> <a href="#">About this series</a> </li>
+          <li> <a href="#">How does it help you</a> </li>
+          <li> <a href="#">FAQs</a> </li>
+          <li> <a href="#">What people are saying</a> </li>
+          <li> <a href="#">About us</a> </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<section class="content-para">
+  <hr class="green-line">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-7">
+        <h1 class="title">About this series</h1>
+        <br>
+        <h3>Upcoming introductory session</h3>
+        <div class="pre">
+          <div class="bold">Topic</div>
+          <div>“Changing Trends in Service Industry”</div>
+          <br>
+          <div class="bold">Venue &amp; Date</div>
+          <div>Thane 22th May, CBD Belapur 23rd May, Goregaon 24th May</div>
+          <br>
+          <div class="bold">Timings</div>
+          <div>Morning slot (&nbsp;11am-2pm&nbsp;) &amp; Evening Slot (&nbsp;3pm-6pm&nbsp;)</div>
+          <br>
+          <div class="bold">Speaker</div>
+          <div>Sonu Bajaj <span class="small">(click to know about the speaker)</span></div>
+          <br>
+          <div class="bold">Price</div>
+          <div>Free (<del>₹ 1500</del>)</div>
+        </div>
+        <br><br>
+        <h3>The entire series</h3>
+        <table class="table">
+          <tr>
+            <td>#1</td>
+            <td class="bold">Changing Trends in Service Industry</td>
+            <td>description&nbsp;&oplus;</td>
+          </tr>
+          <tr>
+            <td>#2</td>
+            <td>
+              <div class="bold">Understanding customer behavior</div>
+            </td>
+            <td>description&nbsp;&oplus;</td>
+          </tr>
+          <tr>
+            <td>#3</td>
+            <td class="bold">Domain specific customer behavior</td>
+            <td>description&nbsp;&oplus;</td>
+          </tr>
+          <tr>
+            <td>#4</td>
+            <td class="bold">Delivering profitable customer experience</td>
+            <td>description&nbsp;&oplus;</td>
+          </tr>
+          <tr>
+            <td>#5</td>
+            <td class="bold">How to grow your customer base - crucial aspects of marketing</td>
+            <td>description&nbsp;&oplus;</td>
+          </tr>
+        </table>
+      </div>
+      <div class="col-md-5">
+        <div class="register-container">
+          <dialog id="register" data-spy="affix" data-offset-top="710" class="panel panel-primary">
+            <div class="panel-heading">
+              <h3 class="panel-title">Upcoming session</h3>
+            </div>
+            <br>
+            <div class="pre col-md-11">
+              <div class="bold">Topic</div>
+              <div>“Changing Trends in Service Industry”</div>
+              <br>
+              <div class="bold">Venue &amp; Date</div>
+              <div>Thane 22th May, CBD Belapur 23rd May, Goregaon 24th May</div>
+              <br>
+            </div>
+            <div class="clearfix"></div>
+            <br>
+            <div class="input-group">
+              <span class="input-group-addon">
+                <span class="glyphicon glyphicon-user"></span>
+              </span>
+              <input type="text" class="form-control" placeholder="Full Name (e.g John Doe)">
+            </div><br>
+            <div class="input-group">
+              <span class="input-group-addon">
+                <span class="glyphicon glyphicon-envelope"></span>
+              </span>
+              <input type="email" class="form-control" placeholder="Email (e.g abc@domain.com)">
+            </div><br>
+            <div class="input-group">
+              <span class="input-group-addon">
+                <span class="glyphicon glyphicon-phone"></span>
+              </span>
+              <input type="text" class="form-control" placeholder="Phone no. (e.g +91-9876543210)">
+            </div><br>
+            <div class="content-center">
+              <button type="button" class="btn btn-primary btn-lg">Register now</button>
+            </div>
+          </dialog>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="content-para">
+  <hr class="green-line">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-7">
+        <h1 class="title">How does it help you</h1>
+        <br><br><br><br><br><br><br><br><br><br><br>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- <section class="content-para">
+  <hr class="green-line">
+  <div class="grid-container">
+    <div class="grid-90 prefix-5 suffix-5">
+      <section class="grid-55">
+        <h1 class="title">About this series</h1>
+        <br>
+        <h2>Upcoming introductory session</h2>
+        <div class="pre">
+          <div class="grid-30 bold">Topic</div>
+          <div class="grid-60 prefix-10">Changing Trends in Service Industry</div>
+          <span class="clearfix"></span><br><br>
+          <div class="grid-30 bold">Date &amp; Venue</div>
+          <div class="grid-60 prefix-10">Thane 22th May, CBD Belapur 23rd May, Goregaon 24th May</div>
+          <span class="clearfix"></span><br>
+          <div class="grid-30 bold">Timings</div>
+          <div class="grid-60 prefix-10">Morning slot (&nbsp;11am-2pm&nbsp;) &amp; Evening Slot (&nbsp;3pm-6pm&nbsp;)</div>
+          <span class="clearfix"></span><br>
+          <div class="grid-30 bold">Speaker</div>
+          <div class="grid-60 prefix-10">Sonu Bajaj <span class="small">(click to know about the speaker)</span></div>
+          <span class="clearfix"></span><br>
+          <div class="grid-30 bold">Price</div>
+          <div class="grid-60 prefix-10">Free (<del>₹ 1500</del>)</div>
+          <span class="clearfix"></span>
+        </div>
+        <br>
+        <h2>The entire series</h2>
+        <table class="tabular-data">
+          <tr>
+            <td>#1</td>
+            <td class="bold">Changing Trends in Service Industry</td>
+            <td>description&nbsp;&oplus;</td>
+          </tr>
+          <tr>
+            <td>#2</td>
+            <td class="bold">Understanding customer behavior</td>
+            <td>description&nbsp;&oplus;</td>
+          </tr>
+          <tr>
+            <td>#3</td>
+            <td class="bold">Domain specific customer behavior</td>
+            <td>description&nbsp;&oplus;</td>
+          </tr>
+          <tr>
+            <td>#4</td>
+            <td class="bold">Delivering profitable customer experience</td>
+            <td>description&nbsp;&oplus;</td>
+          </tr>
+          <tr>
+            <td>#5</td>
+            <td class="bold">How to grow your customer base - crucial aspects of marketing</td>
+            <td>description&nbsp;&oplus;</td>
+          </tr>
+        </table>
+      </section>
+      <section class="grid-40 prefix-5">
+        <div class="dialog-container">
+          <dialog id="register">
+          </dialog>
+        </div>
+      </section>
+      <span class="clearfix"></span>
+    </div>
+  </div>
+</section><br><br>
+
+<section class="content-para">
+  <hr class="green-line">
+  <div class="grid-container">
+    <div class="grid-90 prefix-5 suffix-5">
+      <section class="grid-55">
+        <h1 class="title">How does it help you</h1>
+        <br><br><br><br><br><br><br><br><br><br><br>
+      </section>
+    </div>
+  </div>
+</section> -->

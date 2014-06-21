@@ -1,4 +1,3 @@
-@import 'normalize';
 @import 'scut';
 @import 'compass/css3/box-sizing';
 @import 'compass/css3/images';
@@ -6,6 +5,10 @@
 @import 'compass/css3/text-shadow';
 @import 'compass/css3/box-shadow';
 @import 'compass/css3/hyphenation';
+@import "compass/css3/background-size";
+@import 'compass/css3/font-face';
+
+@include font-face('Glyphicons Halflings', font-files('glyphicons-halflings-regular.woff', 'glyphicons-halflings-regular.ttf', 'glyphicons-halflings-regular.svg#glyphicons_halflingsregular'), 'glyphicons-halflings-regular.eot');
 
 * { @include box-sizing(border-box); }
 
@@ -23,7 +26,6 @@ html,body {
 
 body {
   overflow-x:          hidden;
-  font-family:         'Lato', sans-serif;
   font-weight:         300;
   color:               $font-color;
 }
@@ -32,92 +34,33 @@ body {
   font-family:         'Volkhov', serif;
 }
 
-.index header {
-  color:               darken($green, 20%);
-
-  @include background(image-url("congruent_pentagon.png"));
-
-  hr.green-line {
-    border-width:      0px;
-    border-bottom:     1px solid $green;
-
-    @include scut-relative(-52px n n n);
-  }
-  .bold {
-    font-weight:       300;
-    color:             black;
-  }
-  .title {
-    text-align:        justify;
-
-    @extend h1;
-    @extend .bold;
-
-    @include hyphens(auto);
-  }
-  p {
-    font-size:         17px;
-  }
-  h2{
-    font-weight:       300;
-  }
-  .white-back {
-    width:             85%;
-    background-color:  rgba(255,255,255,0.5);
-
-    @include scut-center-block;
-    @include box-shadow(0px 0px 4px $green);
-  }
-  .logo-container {
-    left:              13.7%;
-    width:             240px;
-    background-color:  White;
-
-    @include scut-padding(60px n 10px n);
-    @include border-bottom-radius(3px);
-    @include box-shadow(0px 0px 1px $green);
-  }
-  .tagline {
-    @include scut-absolute(94px 16% n n);
-  }
-  .display-logo {
-    display:           block;
-    width:             200px;
-
-    @include scut-center-block;
-  }
-
-}
-
 $gradient-color:     rgba(11,254,216,0.5);
-.design2 nav, .design2 header {
+
+nav,  header {
   color:               lighten($green, 45%);
-}
-.design2 header {
-  min-height:          85%;
   @include background(
     linear-gradient($gradient-color, $gradient-color),
     image-url('dark-back.png')
   );
+}
+
+.container {
+  @include scut-padding(auto 30px);
+}
+
+header {
+  margin-top:         50px;
   @include box-shadow(1px 1px 5px lighten(#000,30%));
 
   .display-logo {
     height:            90px;
     background-color:  White;
-    z-index:           2;
+    z-index:           10;
+    top:               -50px;
 
     @include scut-padding(40px 50px 30px 50px);
     @include box-sizing(content-box);
     @include border-bottom-radius(3px);
-  }
-  hr.green-line {
-    top:               -53px;
-    left:              -39.4%;
-    width:             223px;
-    z-index:           2;
-    border-width:      0px;
-    border-bottom:     1px solid $green;
-    display: none;
   }
   .bold {
     font-weight:       300;
@@ -125,37 +68,31 @@ $gradient-color:     rgba(11,254,216,0.5);
   }
   .title {
     font-size:         26px;
-    @extend .bold;
+    line-height:       1.3*26px;
 
+    @extend .bold;
     @include hyphens(auto);
   }
   p {
     font-size:         17px;
     padding:           0px;
   }
-  h2{
-    font-weight:       300;
-  }
-  .grid-40-edited {
-    width:             43%;
-    margin-left:       2%;
+  .ctx-center-big{
+    font-size:         24px;
+    text-align:        center;
   }
   .graphic {
-    max-width:         116%;
+    max-width:         100%;
     margin-top:        10%;
   }
 }
-.design2 nav {
-  @include background(
-    linear-gradient($gradient-color, $gradient-color),
-    image-url('dark-back.png')
-  );
-  width:               100%;
+ nav {
   position:            fixed;
   top:                 0px;
-  height:              59px;
+  height:              60px;
+  width:               100%;
   border-bottom:       1px solid White;
-  text-align:          right;
+  z-index:             9;
 
   ul {
     margin-top:        20px;
@@ -169,6 +106,86 @@ $gradient-color:     rgba(11,254,216,0.5);
       text-decoration: underline;
     }
   }
+
+  .nav-logo {
+    height:            44px;
+    margin-top:        8px;
+    margin-left:       12%;
+  }
+}
+.content-para {
+  h1,h3{
+    font-weight:       300;
+  }
+  .pre {
+    padding-left:      25px;
+    border-left:       3px solid lighten(#000, 80%);
+  }
+  .title {
+    background-color:  White;
+    padding-left:      15px;
+    &:after {
+      position:        absolute;
+      top:             10px;
+      right:           25px;
+      width:           80px;
+      height:          30px;
+      content:         ' ';
+      @include background(image-url('logo-g-tx.png') no-repeat);
+      @include background-size;
+    }
+  }
+  .green-line {
+    border-width:      0px;
+    border-bottom:     2px solid $green;
+    top:               70px;
+  }
+  .bold {
+    font-weight:       bold;
+  }
+  .small {
+    font-size:         12px;
+  }
+}
+
+.register-container {
+  padding-top:         130px;
+}
+#register {
+  float:               right;
+  width:               350px;
+  height:              490px;
+  border-color:        lighten(#000, 90%);
+  // border:              1px solid $green;
+  // background-color:    White;
+  z-index:             2;
+  //padding:             20px;
+
+  // @include border-radius(15px);
+  // @include box-shadow(0px 0px 10px $green inset);
+
+  .input-group {
+    width: 80%;
+    margin-left: 10%;
+  }
+
+  &.affix {
+    right:             6.7%;
+    top:               91px;
+  }
+
+  .btn-primary {
+    border-color:     darken($red, 5%);
+    @include background(
+      linear-gradient(top, $red, darken($red, 5%))
+    );
+    &:hover{
+      background:     darken($red, 14%);
+    }
+  }
+  .pre {
+    margin-left:      5%;
+  }
 }
 // ----------------------------------------------------------------------------
 //                             UTILITIES
@@ -178,6 +195,9 @@ $gradient-color:     rgba(11,254,216,0.5);
 }
 .content-center {
   text-align:          center;
+}
+.content-right {
+  text-align:          right;
 }
 .float-right {
   float:               right;

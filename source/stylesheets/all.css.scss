@@ -20,14 +20,14 @@ $font-color:           lighten(#000, 30%);
 $green:                #23A38F;
 $red:                  #F0563D;
 
-html,body {
-  height:              100%;
-}
-
 body {
   overflow-x:          hidden;
   font-weight:         300;
   color:               $font-color;
+}
+
+a {
+  outline:             0 !important;
 }
 
 .special-font {
@@ -94,16 +94,23 @@ header {
   border-bottom:       1px solid White;
   z-index:             9;
 
-  ul {
-    margin-top:        20px;
-    @include scut-list-inline(20px, false);
-  }
-  a {
-    text-decoration:   none;
-    color:             inherit;
-    &:hover {
+  ul.nav {
+    margin-top:        10px;
+    @include scut-list-inline(0px, false);
+
+    a {
+      text-decoration:   none;
+      color:             inherit;
+      &:hover {
+        color:           white;
+        text-decoration: underline;
+        background-color: transparent;
+      }
+    }
+    li.active a {
       color:           white;
       text-decoration: underline;
+      background-color: transparent;
     }
   }
 
@@ -167,6 +174,27 @@ header {
   .ctx-no-pad {
     padding:           0px;
   }
+  .ctx-glyph-red {
+    color:            $green;
+  }
+}
+
+.series-row {
+  &:hover {
+    cursor:          pointer;
+  }
+  .desc {
+    font-weight:       300;
+  }
+  .glyphicon-plus-sign  { display: inline; }
+  .glyphicon-minus-sign { display: none;   }
+  .desc                 { display: none;   }
+
+  &.js-expanded {
+    .glyphicon-plus-sign  { display: none;   }
+    .glyphicon-minus-sign { display: inline; }
+    .desc                 { display: block;  }
+  }
 }
 
 .faq {
@@ -185,10 +213,6 @@ header {
     .list-group-item-text { display: block;  }
   }
 }
-a.faq {
-  outline:             0;
-}
-
 .register-container {
   padding-top:         130px;
 }
@@ -233,6 +257,13 @@ a.faq {
   .ctx-mrgn-m {
     margin-top:       15px;
   }
+}
+
+iframe.map {
+  width:              450px;
+  height:             350px;
+  border:             none;
+  @include border-radius(3px);
 }
 
 .sticky {

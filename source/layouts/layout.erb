@@ -15,7 +15,7 @@
     <%= stylesheet_link_tag "bootstrap.min", "bootstrap-theme.min", "all" %>
   </head>
 
-  <body class="<%= page_classes %>">
+  <body class="<%= page_classes %>" data-spy="scroll" data-target=".nav-main" data-offset="100">
     <%= yield %>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <%= javascript_include_tag  "all" %>

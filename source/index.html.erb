@@ -1,7 +1,28 @@
 ---
 title: bech Smartly -  seekh kar bech, smartly bech.
 ---
-<header id="hero">
+<nav class="">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3">
+        <a href="#"><%= image_tag "logo.png", :class=> 'nav-logo' %></a>
+        <div class="tagline">seekh kar <span class="ctx-bold">bech</span>, smartly <span class="ctx-bold">bech</span></div>
+      </div>
+      <div class="col-md-9 content-right nav-main">
+        <ul>
+          <li> <a href="#about-series">About this series</a> </li>
+          <li> <a href="#how-it-helps">How does it help you</a> </li>
+          <li> <a href="#faqs">FAQs</a> </li>
+          <li> <a href="#what-people-are-saying">What people are saying</a> </li>
+          <li> <a href="#contact-us">Contact Us</a> </li>
+          <li> <a href="#about-us">About us</a> </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<header id="home">
   <div class="container">
     <div class="row">
       <div class="col-md-5">
@@ -29,28 +50,6 @@ title: bech Smartly -  seekh kar bech, smartly bech.
   <br>
 </header>
 
-<nav>
-  <div class="container">
-    <div class="row">
-      <div class="col-md-3">
-        <a href="#"><%= image_tag "logo.png", :class=> 'nav-logo' %></a>
-        <div class="tagline">seekh kar <span class="ctx-bold">bech</span>, smartly <span class="ctx-bold">bech</span></div>
-      </div>
-      <div class="col-md-9 content-right nav-main">
-        <ul class="nav">
-          <li> <a href="#hero" style="display:none;">Home</a> </li>
-          <li> <a href="#about-series">About this series</a> </li>
-          <li> <a href="#how-it-helps">How does it help you</a> </li>
-          <li> <a href="#faqs">FAQs</a> </li>
-          <li> <a href="#people-saying">What people are saying</a> </li>
-          <li> <a href="#contact-us">Contact Us</a> </li>
-          <li> <a href="#about-us">About us</a> </li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</nav>
-
 <section class="content-para" id="about-series">
   <hr class="green-line">
   <div class="container">
@@ -77,7 +76,7 @@ title: bech Smartly -  seekh kar bech, smartly bech.
         </div>
         <br><br>
         <h3>The entire series</h3>
-        <table class="table">
+        <table class="table ">
           <% data.series.series.each_with_index do |data, index| %>
           <tr class="series-row">
             <td>#<%= index+1 %></td>
@@ -102,7 +101,7 @@ title: bech Smartly -  seekh kar bech, smartly bech.
       </div>
       <div class="col-md-5">
         <div class="register-container">
-          <dialog id="register" data-spy="affix" data-offset-top="710" class="panel panel-primary">
+          <dialog id="register" class="panel panel-primary ">
             <div class="panel-heading">
               <h3 class="panel-title">Upcoming introductory session</h3>
             </div>
@@ -169,7 +168,7 @@ title: bech Smartly -  seekh kar bech, smartly bech.
     <div class="col-md-7" id="container">
       <h1 class="title">FAQs</h1>
       <br><br>
-      <div class="list-group">
+      <div class="list-group ">
         <% data.faqs.faqs.each_with_index do |faq, index| %>
           <a href="#" class="list-group-item faq <%= 'current' if index == 0 %>">
             <div class="list-group-item-heading">
@@ -188,7 +187,7 @@ title: bech Smartly -  seekh kar bech, smartly bech.
   </div>
 </section>
 
-<section class="content-para green-textured-back" id="people-saying">
+<section class="content-para green-textured-back" id="what-people-are-saying">
   <div class="container">
     <div class="col-md-8" id="container">
       <h1 class="title">What people are saying</h1>
@@ -225,14 +224,14 @@ title: bech Smartly -  seekh kar bech, smartly bech.
         </p>
       </div>
       <div class="col-md-7 content-right">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3768.650527674107!2d72.83351365!3d19.166768900000005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b65c014f4753%3A0x8659bbde56647301!2sBhanumati!5e0!3m2!1sen!2s!4v1395997120021" frameborder="0" height="350" width="450" class="map"></iframe>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3768.650527674107!2d72.83351365!3d19.166768900000005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b65c014f4753%3A0x8659bbde56647301!2sBhanumati!5e0!3m2!1sen!2s!4v1395997120021" frameborder="0" height="350" width="450" class="map "></iframe>
       </div>
     </div>
   </div>
   <br>
 </section>
 
-<section class="content-para" id="about-us">
+<section class="content-para " id="about-us">
   <hr class="green-line">
   <div class="container">
     <div class="col-md-7" id="container">

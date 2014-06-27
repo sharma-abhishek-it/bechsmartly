@@ -24,6 +24,7 @@ body {
   overflow-x:          hidden;
   font-weight:         300;
   color:               $font-color;
+  padding-top:         60px;
 }
 
 a {
@@ -49,14 +50,13 @@ nav,  header, .green-textured-back {
 }
 
 header {
-  margin-top:         50px;
-  @include box-shadow(1px 1px 5px lighten(#000,30%));
+  z-index:            10;
+  @include box-shadow(1px 2px 2px lighten(#000,30%));
 
   .display-logo {
     height:            90px;
     background-color:  White;
-    z-index:           10;
-    top:               -50px;
+    top:               -60px;
 
     @include scut-padding(40px 50px 30px 50px);
     @include box-sizing(content-box);
@@ -71,7 +71,7 @@ header {
     font-size:         12px;
     z-index:           10;
 
-    @include scut-absolute(n 160px 50px n);
+    @include scut-absolute(n 160px 60px n);
     .ctx-bold {
       color:           black;
       font-weight:     400;
@@ -98,6 +98,8 @@ header {
   }
 }
  nav {
+  ::selection      {background-color: transparent !important;}
+  ::-moz-selection {background-color: transparent !important;}
   position:            fixed;
   top:                 0px;
   height:              60px;
@@ -105,18 +107,26 @@ header {
   border-bottom:       1px solid White;
   z-index:             9;
 
-  ul.nav {
-    margin-top:        10px;
-    @include scut-list-inline(0px, false);
+  ul {
+    margin-top:        20px;
+    @include scut-list-inline(30px, false);
 
     a {
       text-decoration:   none;
       color:             inherit;
+      outline:           0 !important;
+      background-color:  transparent !important;
       &:hover {
         color:           white;
         text-decoration: underline;
-        background-color: transparent;
       }
+      &:visited,&:focus,&:active {
+        text-decoration:   none;
+        color:             inherit;
+      }
+    }
+    li {
+      background-color: transparent;
     }
     li.active a {
       color:           white;

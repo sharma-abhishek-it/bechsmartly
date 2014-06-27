@@ -4,7 +4,7 @@ var $d          = $(document);
 var $w          = $(window);
 var $register   = $('#register');
 var $navAnchors = $('nav ul li > a');
-var navOffset   = $('nav').height();
+var navOffset   = 19;
 
 var scrolled       = false;
 var lastScrollTime = Date.now();
@@ -70,12 +70,20 @@ $d.ready(function(){
   $('header, section.content-para').unveil(250, function(){
     var id = '#' + $(this).attr('id');
 
-    $navAnchors.parent().removeClass('active');
-    $navAnchors
-    .filter(function(){ return $(this).attr('href') == id; })
-    .parent().addClass('active');
+    var $el = $navAnchors.filter(function(){ return ($(this).attr('href') == id && !$(this).parent().hasClass('active')); })
 
-    window.location.hash = '#/' + $(this).attr('id');
+    if($el.length > 0) {
+      $navAnchors.parent().removeClass('active');
+      $el.parent().addClass('active');
+      window.location.hash = '#/' + $(this).attr('id');
+
+      $.event.trigger({
+        type: "custom-page-changed",
+        message: $(this).attr('id'),
+        time: new Date()
+      })
+    }
+
   });
 
   $d.on('human-scroll', function(){

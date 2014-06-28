@@ -207,6 +207,11 @@ header {
   .ctx-glyph-red {
     color:            $green;
   }
+  .series-price {
+    color:            $red;
+    padding-left:     10px;
+    font-size:        17px;
+  }
 }
 
 .series-row {

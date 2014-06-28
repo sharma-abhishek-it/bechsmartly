@@ -64,7 +64,11 @@ title: bech Smartly -  seekh kar bech, smartly bech.
           <div>“Changing Trends in Service Industry”</div>
           <br>
           <div class="bold">Venues &amp; Dates</div>
-          <div>Thane 22th May, CBD Belapur 23rd May, Goregaon 24th May</div>
+          <div>
+            <% data.next_session.days.split(',').each do |day| %>
+              <%= day %><br>
+            <% end %>
+          </div>
           <br>
           <div class="bold">Timings</div>
           <div>Morning slot (&nbsp;11am-2pm&nbsp;) &amp; Evening Slot (&nbsp;3pm-6pm&nbsp;)</div>
@@ -76,7 +80,7 @@ title: bech Smartly -  seekh kar bech, smartly bech.
           <div>FREE (<del>₹ 1500</del>)</div>
         </div>
         <br><br>
-        <h3>The entire series</h3>
+        <h3>The entire series <span class="series-price">(price: ₹ 7000)</span></h3>
         <table class="table ">
           <% data.series.series.each_with_index do |data, index| %>
           <tr class="series-row">
@@ -110,7 +114,7 @@ title: bech Smartly -  seekh kar bech, smartly bech.
               <div class="bold">Topic</div>
               <div>“Changing Trends in Service Industry”</div>
               <div class="bold ctx-mrgn-s">Venues &amp; Dates</div>
-              <div>Thane 22th May, CBD Belapur 23rd May, Goregaon 24th May</div>
+              <div><%= data.next_session.dates %></div>
               <div class="bold ctx-mrgn-s">Price</div>
               <div>FREE (<del>₹ 1500</del>)</div>
             </div>
@@ -217,7 +221,7 @@ title: bech Smartly -  seekh kar bech, smartly bech.
         </p>
         <p class="clearfix">
           <span class="col-md-2 ctx-no-pad"><span class="glyphicon glyphicon-phone ctx-glyph-red"></span></span>
-          <span class="col-md-10 ctx-no-pad">022-9876-5432, +91-9876543210</span>
+          <span class="col-md-10 ctx-no-pad">+91-8879779807</span>
         </p>
         <p class="clearfix">
           <span class="col-md-2 ctx-no-pad"><span class="glyphicon glyphicon-envelope ctx-glyph-red"></span></span>

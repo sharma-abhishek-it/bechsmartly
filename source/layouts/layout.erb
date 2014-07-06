@@ -43,7 +43,7 @@
       $(document).on('custom-page-changed', function(e){
         clearTimeout(sendAnalyticsTimeout);
         sendAnalyticsTimeout = setTimeout(function(){
-          ga('send', 'pageview', {'title': e.message});
+          ga('send', 'pageview', {'page': '/'+e.message, 'title': e.message});
         },2200);
       })
       </script>

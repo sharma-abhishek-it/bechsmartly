@@ -138,7 +138,7 @@ $d.ready(function(){
           },
           remote: {
             message: 'The email is already registered',
-            url: 'http://bechsmartly.parseapp.com/check-email',
+            url: 'http://app.bechsmartly.in/check-email',
           }
         }
       },

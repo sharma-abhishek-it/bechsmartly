@@ -117,6 +117,12 @@ $d.ready(function(){
         } else {
           $('#errorModal').modal();
         }
+
+        $.event.trigger({
+          type: "registration-done",
+          message: result.status,
+          time: new Date()
+        });
       }, 'json');
     },
     fields: {

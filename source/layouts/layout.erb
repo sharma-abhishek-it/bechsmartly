@@ -48,6 +48,13 @@
           ga('send', 'pageview', {'page': '/'+e.message, 'title': e.message});
         },2200);
       })
+      $(document).on('registration-done', function(e) {
+        if(e.message == 1) {
+          ga('send', 'event', 'Registration', 'Success');
+        } else {
+          ga('send', 'event', 'Registration', 'Error');
+        }
+      });
       </script>
     <% end %>
   </body>

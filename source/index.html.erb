@@ -120,27 +120,30 @@ title: bech Smartly -  seekh kar bech, smartly bech.
             </div>
             <div class="clearfix"></div>
             <br>
-            <div class="input-group">
-              <span class="input-group-addon">
-                <span class="glyphicon glyphicon-user"></span>
-              </span>
-              <input type="text" class="form-control" placeholder="Full Name (e.g John Doe)">
-            </div>
-            <div class="input-group ctx-mrgn-m">
-              <span class="input-group-addon">
-                <span class="glyphicon glyphicon-envelope"></span>
-              </span>
-              <input type="email" class="form-control" placeholder="Email (e.g abc@domain.com)">
-            </div>
-            <div class="input-group ctx-mrgn-m">
-              <span class="input-group-addon">
-                <span class="glyphicon glyphicon-phone"></span>
-              </span>
-              <input type="text" class="form-control" placeholder="Mobile (e.g +91-9876543210)">
-            </div><br>
-            <div class="content-center">
-              <button type="button" class="btn btn-primary btn-lg">Register now</button>
-            </div>
+            <form class="register" validate="novalidate" action="http://app.bechsmartly.in/register" method="post">
+              <div class="input-group form-group">
+                <span class="input-group-addon">
+                  <span class="glyphicon glyphicon-user"></span>
+                </span>
+                <input type="text" class="form-control" name="fullname" required placeholder="Full Name (e.g John Doe)">
+              </div>
+              <div class="input-group ctx-mrgn-m form-group">
+                <span class="input-group-addon">
+                  <span class="glyphicon glyphicon-envelope"></span>
+                </span>
+                <input type="email" class="form-control" name="email" required placeholder="Email (e.g abc@domain.com)">
+              </div>
+              <div class="input-group ctx-mrgn-m form-group">
+                <span class="input-group-addon">
+                  <span class="glyphicon glyphicon-phone"></span>
+                </span>
+                <input type="text" class="form-control" name="mobile" required placeholder="Mobile (e.g 9876543210)">
+              </div><br>
+              <div class="content-center">
+                <input type="submit" class="btn btn-primary btn-lg" value="Register now">
+                <span class="glyphicon glyphicon-refresh loader"></span>
+              </div>
+            </form>
           </dialog>
         </div>
       </div>
@@ -247,3 +250,36 @@ title: bech Smartly -  seekh kar bech, smartly bech.
   </div>
   <br><br><br><br><br>
 </section>
+
+<div class="modal fade" role="dialog" id="successModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title">Thank you for registering</h4>
+      </div>
+      <div class="modal-body">
+        <p>You have successfully registered for the upcoming session. Our representative shall get in touch with you shortly.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+<div class="modal fade" role="dialog" id="errorModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title">Oops some error occurred.</h4>
+      </div>
+      <div class="modal-body">
+        <p>Seems some server issue has occurred. Please submit again or come back later.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->

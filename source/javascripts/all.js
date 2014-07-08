@@ -9,6 +9,9 @@ var navOffset   = 19;
 var scrolled       = false;
 var lastScrollTime = Date.now();
 var scrollEnd      = true;
+
+var validator      = null;
+
 setInterval(function(){
   if(scrolled) {
     $.event.trigger({
@@ -92,5 +95,70 @@ $d.ready(function(){
     } else {
       $register.addClass('affix');
     }
+  })
+  $('form.register')[0].reset();
+  $('form.register').bootstrapValidator({
+    message: 'This value is not valid',
+    feedbackIcons: {
+      valid: 'glyphicon glyphicon-ok',
+      invalid: 'glyphicon glyphicon-remove',
+      validating: 'glyphicon glyphicon-refresh'
+    },
+    submitHandler: function(validator, form, submitButton) {
+      // Use Ajax to submit form data
+      $('form.register input.btn').hide();
+      $('form.register .loader').addClass('show');
+      $.post(form.attr('action'), form.serialize(), function(result) {
+        $('form.register input.btn').show();
+        $('form.register .loader').removeClass('show');
+
+        if(result.status == 1) {
+          $('#successModal').modal();
+        } else {
+          $('#errorModal').modal();
+        }
+      }, 'json');
+    },
+    fields: {
+      fullname: {
+        validators: {
+          notEmpty: {
+            message: 'Your name is required and cannot be empty'
+          }
+        }
+      },
+      email: {
+        enabled: false,
+        validators: {
+          notEmpty: {
+            message: 'The email is required and cannot be empty'
+          },
+          emailAddress: {
+            message: 'The input is not a valid email address'
+          },
+          remote: {
+            message: 'The email is already registered',
+            url: 'http://bechsmartly.parseapp.com/check-email',
+          }
+        }
+      },
+      mobile: {
+        validators: {
+          notEmpty: {
+            message: 'The mobile no. is required and cannot be empty'
+          },
+          phone: {
+            message: 'The input is not a valid mobile no.'
+          }
+        }
+      },
+    }
+  });
+  validator = $('form.register').data('bootstrapValidator');
+  $('form.register input[name=email]').blur(function(){
+    validator.enableFieldValidators('email', true);
+    validator.validateField('email');
+  }).focus(function(){
+    validator.enableFieldValidators('email', false);
   })
 })

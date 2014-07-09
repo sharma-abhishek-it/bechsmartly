@@ -1,3 +1,5 @@
+require 'custom-logic'
+
 ###
 # Compass
 ###
@@ -68,6 +70,8 @@ configure :build do
   activate :minify_html
 
   activate :gzip
+
+  activate :gzip_rewrite
 
   # Enable cache buster
   activate :asset_hash

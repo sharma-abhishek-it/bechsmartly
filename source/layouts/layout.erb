@@ -35,14 +35,14 @@
   </head>
 
   <body class="<%= page_classes %>" style="display: none;">
-    <%= image_tag 'dark-back.png', :id => 'back' %>
+    <script>
+    function showBody(){
+      document.getElementsByTagName('body')[0].style.display = 'block';
+    }
+    </script>
+    <%= image_tag 'dark-back.png', :id => 'back', :onload => 'showBody();' %>
     <%= yield %>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script>
-    $('#back').ready(function(){
-      $('body').show();
-    })
-    </script>
     <%= javascript_include_tag  "all" %>
 
     <% if build? %>

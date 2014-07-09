@@ -2,8 +2,6 @@
 
 var $d          = $(document);
 var $w          = $(window);
-var $register   = $('#register');
-var $navAnchors = $('nav ul li > a');
 var navOffset   = 19;
 
 var scrolled       = false;
@@ -42,7 +40,11 @@ $w.load(function(){
 })
 
 $d.ready(function(){
+  var $register   = $('#register');
+  var $navAnchors = $('nav ul li > a');
+
   $('body').show();
+
   $w.scrollTop(0);
   $('.faq').click(function(e){
     e.preventDefault();
@@ -96,8 +98,10 @@ $d.ready(function(){
 
   $d.on('human-scroll', function(){
     if ($d.scrollTop() < 710 ) {
+      console.log('R affix');
       $register.removeClass('affix');
     } else {
+      console.log('A affix');
       $register.addClass('affix');
     }
   })

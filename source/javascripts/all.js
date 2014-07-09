@@ -43,7 +43,7 @@ $d.ready(function(){
   var $register   = $('#register');
   var $navAnchors = $('nav ul li > a');
 
-  $('body').show();
+  $('img').show();
 
   $w.scrollTop(0);
   $('.faq').click(function(e){

@@ -54,7 +54,7 @@
     <% end %>
   </head>
 
-  <body class="<%= page_classes %>" style="display: none;">
+  <body class="<%= page_classes %>">
     <%= image_tag 'dark-back.png', :onload => '$("body").show();', :id=>'back' %>
     <%= yield %>
   </body>

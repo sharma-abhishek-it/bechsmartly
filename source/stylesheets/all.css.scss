@@ -16,6 +16,10 @@
   position:            relative;
 }
 
+img {
+  display:             none;
+}
+
 $font-color:           lighten(#000, 30%);
 $green:                #23A38F;
 $red:                  #F0563D;
@@ -46,6 +50,7 @@ nav,  header, .green-textured-back {
 }
 
 #back {
+  display:             block;
   width:               1px;
   height:              1px;
   @include scut-absolute(-999px n n -999px);

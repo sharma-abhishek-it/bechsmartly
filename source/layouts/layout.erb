@@ -31,8 +31,15 @@
 
     <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400|Volkhov:400,700' rel='stylesheet' type='text/css'>
 
-    <%= stylesheet_link_tag "bootstrap", "all" %>
+    <%= stylesheet_link_tag "all" %>
+  </head>
+
+  <body class="<%= page_classes %>">
+    <%= image_tag 'dark-back.png', :onload => '$("body").show();', :id=>'back' %>
+    <%= yield %>
+
     <%= javascript_include_tag  "all" %>
+
     <% if build? %>
       <script>
       var sendAnalyticsTimeout = null;
@@ -51,10 +58,5 @@
       });
       </script>
     <% end %>
-  </head>
-
-  <body class="<%= page_classes %>">
-    <%= image_tag 'dark-back.png', :onload => '$("body").show();', :id=>'back' %>
-    <%= yield %>
   </body>
 </html>

@@ -182,4 +182,22 @@ $d.ready(function(){
   }).focus(function(){
     validator.enableFieldValidators('email', false);
   })
+
+  if (GLOBAL_IS_PROD) {
+    console.log('PRODUCTION');
+    var sendAnalyticsTimeout = null;
+    $d.on('custom-page-changed', function(e){
+      clearTimeout(sendAnalyticsTimeout);
+      sendAnalyticsTimeout = setTimeout(function(){
+        ga('send', 'pageview', {'page': '/'+e.message, 'title': e.message});
+      },2200);
+    })
+    $d.on('registration-done', function(e) {
+      if(e.message == 1) {
+        ga('send', 'event', 'Registration', 'Success');
+      } else {
+        ga('send', 'event', 'Registration', 'Error');
+      }
+    });
+  }
 })

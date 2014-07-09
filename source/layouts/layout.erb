@@ -38,25 +38,10 @@
     <%= image_tag 'dark-back.png', :onload => '$("body").show();', :id=>'back' %>
     <%= yield %>
 
-    <%= javascript_include_tag  "all" %>
-
     <% if build? %>
-      <script>
-      var sendAnalyticsTimeout = null;
-      $(document).on('custom-page-changed', function(e){
-        clearTimeout(sendAnalyticsTimeout);
-        sendAnalyticsTimeout = setTimeout(function(){
-          ga('send', 'pageview', {'page': '/'+e.message, 'title': e.message});
-        },2200);
-      })
-      $(document).on('registration-done', function(e) {
-        if(e.message == 1) {
-          ga('send', 'event', 'Registration', 'Success');
-        } else {
-          ga('send', 'event', 'Registration', 'Error');
-        }
-      });
-      </script>
+      <script>GLOBAL_IS_PROD = true;</script>
     <% end %>
+
+    <%= javascript_include_tag  "all" %>
   </body>
 </html>

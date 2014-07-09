@@ -1,6 +1,6 @@
 //= require jquery-11.1.min
 //= require bootstrap.min
-//= require bootstrapValidator
+//= require bootstrapValidator.min
 //= require jquery.unveil.mod
 
 

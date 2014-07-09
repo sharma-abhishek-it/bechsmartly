@@ -43,6 +43,10 @@ $d.ready(function(){
   var $register   = $('#register');
   var $navAnchors = $('nav ul li > a');
 
+  setTimeout(function(){
+    $('.lazy').each(function(){$(this).attr('src', $(this).data('src'))});
+  }, 100);
+
   $('img').show();
 
   $w.scrollTop(0);

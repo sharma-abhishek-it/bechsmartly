@@ -5,7 +5,7 @@ title: bech Smartly -  seekh kar bech, smartly bech.
   <div class="container">
     <div class="row">
       <div class="col-md-3">
-        <a href="#"><%= image_tag "logo.png", :class=> 'nav-logo' %></a>
+        <a href="#"><img data-src="<%= asset_path :images, 'logo.png' %>" class="nav-logo lazy" /></a>
         <div class="tagline">seekh kar <span class="ctx-bold">bech</span>, smartly <span class="ctx-bold">bech</span></div>
       </div>
       <div class="col-md-9 content-right nav-main">
@@ -27,7 +27,7 @@ title: bech Smartly -  seekh kar bech, smartly bech.
   <div class="container">
     <div class="row">
       <div class="col-md-5">
-        <%= image_tag 'logo.png', :class => 'display-logo' %>
+        <img data-src="<%= asset_path :images, 'logo.png' %>" class="display-logo lazy" />
         <div class="tagline">seekh kar <span class="ctx-bold">bech</span>, smartly <span class="ctx-bold">bech</span></div>
       </div>
     </div>
@@ -44,7 +44,7 @@ title: bech Smartly -  seekh kar bech, smartly bech.
         <p class="ctx-center-big"><span class="underline">Kindly scroll below to know more</span> &nbsp;&nbsp;&nbsp;&#8595;</p>
       </div>
       <div class="col-md-6">
-        <%= image_tag 'graphics.png', :class => 'graphic' %>
+        <img data-src="<%= asset_path :images, 'graphics.png' %>" class="graphic lazy" />
       </div>
     </div>
   </div>
@@ -200,11 +200,11 @@ title: bech Smartly -  seekh kar bech, smartly bech.
     <div class="col-md-8" id="container">
       <h1 class="title">What people are saying</h1>
       <br><br><br>
-      <%= image_tag 'sticky5-new.png', :class => 'sticky sticky1' %>
-      <%= image_tag 'sticky2-new.png', :class => 'sticky sticky2' %>
-      <%= image_tag 'sticky3-new.png', :class => 'sticky sticky3' %>
-      <%= image_tag 'sticky4-new.png', :class => 'sticky sticky4' %>
-      <%= image_tag 'sticky1-new.png', :class => 'sticky sticky5' %>
+      <img data-src="<%= asset_path :images, 'sticky5-new.png' %>" class="lazy sticky sticky1" />
+      <img data-src="<%= asset_path :images, 'sticky2-new.png' %>" class="lazy sticky sticky2" />
+      <img data-src="<%= asset_path :images, 'sticky3-new.png' %>" class="lazy sticky sticky3" />
+      <img data-src="<%= asset_path :images, 'sticky4-new.png' %>" class="lazy sticky sticky4" />
+      <img data-src="<%= asset_path :images, 'sticky1-new.png' %>" class="lazy sticky sticky5" />
     </div>
   </div>
   <br><br>

@@ -1,4 +1,8 @@
-//= require_tree .
+//= require jquery-11.1.min
+//= require bootstrap.min
+//= require bootstrapValidator
+//= require jquery.unveil.mod
+
 
 var $d          = $(document);
 var $w          = $(window);

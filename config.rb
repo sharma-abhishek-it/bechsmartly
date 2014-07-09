@@ -69,7 +69,7 @@ configure :build do
 
   activate :minify_html
 
-  activate :gzip
+  activate :gzip, :exts => ['.css', '.js']
 
   activate :gzip_rewrite
 

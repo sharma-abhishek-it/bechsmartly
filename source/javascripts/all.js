@@ -102,10 +102,8 @@ $d.ready(function(){
 
   $d.on('human-scroll', function(){
     if ($d.scrollTop() < 710 ) {
-      console.log('R affix');
       $register.removeClass('affix');
     } else {
-      console.log('A affix');
       $register.addClass('affix');
     }
   })

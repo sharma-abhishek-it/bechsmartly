@@ -42,6 +42,7 @@ $w.load(function(){
 })
 
 $d.ready(function(){
+  $('body').show();
   $w.scrollTop(0);
   $('.faq').click(function(e){
     e.preventDefault();

@@ -45,6 +45,12 @@ nav,  header, .green-textured-back {
   );
 }
 
+#back {
+  width:               1px;
+  height:              1px;
+  @include scut-absolute(-999px n n -999px);
+}
+
 .container {
   @include scut-padding(auto 30px);
 }

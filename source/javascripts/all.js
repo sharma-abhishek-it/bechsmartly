@@ -37,6 +37,10 @@ setInterval(function(){
 }, 100);
 $d.scroll(function(){scrolled = true;});
 
+$w.load(function(){
+  $('#map-container').append('<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3768.650527674107!2d72.83351365!3d19.166768900000005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b65c014f4753%3A0x8659bbde56647301!2sBhanumati!5e0!3m2!1sen!2s!4v1395997120021" frameborder="0" height="350" width="450" class="map "></iframe>')
+})
+
 $d.ready(function(){
   $w.scrollTop(0);
   $('.faq').click(function(e){

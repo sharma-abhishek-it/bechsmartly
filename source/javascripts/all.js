@@ -184,7 +184,6 @@ $d.ready(function(){
   })
 
   if (GLOBAL_IS_PROD) {
-    console.log('PRODUCTION');
     var sendAnalyticsTimeout = null;
     $d.on('custom-page-changed', function(e){
       clearTimeout(sendAnalyticsTimeout);

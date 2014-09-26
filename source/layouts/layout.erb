@@ -38,6 +38,7 @@
     <%= image_tag 'dark-back.png', :id=>'back' %>
     <%= yield %>
 
+    <script>GLOBAL_IS_PROD = false;</script>
     <% if build? %>
       <script>GLOBAL_IS_PROD = true;</script>
     <% end %>

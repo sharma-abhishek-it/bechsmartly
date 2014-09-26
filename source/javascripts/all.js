@@ -26,7 +26,7 @@ setInterval(function(){
     scrollEnd = false;
   }
 
-  if(Date.now() - lastScrollTime > 100 && !scrollEnd) {
+  if(Date.now() - lastScrollTime > 50 && !scrollEnd) {
     scrollEnd = true;
     $.event.trigger({
       type: "human-scroll-end",
@@ -36,7 +36,7 @@ setInterval(function(){
     lastScrollTime = Date.now();
   }
 
-}, 100);
+}, 50);
 $d.scroll(function(){scrolled = true;});
 
 $w.load(function(){

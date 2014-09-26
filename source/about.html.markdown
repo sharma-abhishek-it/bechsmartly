@@ -1,4 +1,4 @@
-Knowledge series initiated by [In-Focus](http://in-focus.in) for streamlining the service industry in India.
+Knowledge series initiated by In-Focus and TakeOff for streamlining the service industry in India.
 We all know service industry is the biggest revenue generator for govt of India & accounts for livelihood
 to majority of indian entrepreneurs. Our existing & budding service providers need better knowledge of consumer
 needs and behaviour to deliver better services and become a part of an organised service sector.
